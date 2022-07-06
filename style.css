@@ -12,6 +12,7 @@ body {
 header {
   background-image: url("bg-hero-desktop.svg");
   background-color: hsl(193, 100%, 96%);
+  padding: 1em;
 }
 .middle {
   display: flex;
@@ -46,6 +47,8 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   grid-area: b;
+  width: 95%;
+  background-color: hsl(193, 100%, 96%);
 }
 
 .top2 {
@@ -57,9 +60,9 @@ header {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: hsl(193, 100%, 96%);
-  grid-area: c;
+  width: 95%;
 }
 
 .top3 {
@@ -71,9 +74,10 @@ header {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: hsl(193, 100%, 96%);
-  grid-area: d;
+  width: 95%;
+  margin-bottom: 40px;
 }
 
 .top4 {
@@ -83,19 +87,21 @@ header {
   place-items: center;
   padding: 2em;
   margin-top: 0px;
-  border-radius: 8px;
-  background-color: white;
-  grid-area: e;
-  width: 60%;
-  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgb(248, 242, 234);
+  width: 95%;
+  margin-bottom: -40px;
 }
 
 .top5 {
+  padding-top: 110px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
-  padding: 2em;
   margin-top: -40px;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   background-color: hsl(192, 100%, 9%);
   grid-area: f;
 }
@@ -105,6 +111,7 @@ header {
   background-color: white;
   border-radius: 20px;
   padding: 1em;
+  transition: width 2s linear 1s;
 }
 .but2 {
   border-color: hsl(322, 100%, 66%);
@@ -115,10 +122,11 @@ header {
   width: 80%;
   margin-top: 6px;
   margin-bottom: 20px;
+  transition: width 2s linear 1s;
 }
 
-.but2:active{
-  background-color: transparent;
+.but2:active {
+  background-color: hsl(322, 100%, 66%, 0.2);
 }
 
 .but3 {
@@ -126,19 +134,30 @@ header {
   border-radius: 20px;
   background-color: hsl(322, 100%, 66%);
   padding: 1em;
-  width: 60%;
+  width: 80%;
   margin-top: 6px;
   margin-bottom: 6px;
 }
 
-.but3:active{
-  background-color: transparent;
+.but3:active {
+  background-color: hsl(322, 100%, 66%, 0.3);
+}
+
+.trans1 {
+  width: 80%;
+  transition: width 2s linear 1s;
+}
+.trans1:hover {
+  width: 300px;
 }
 
 img {
-  max-width: 300px;
+  max-width: 280px;
 }
-
+.whitelogo {
+  -webkit-filter: hue-rotate(40deg) saturate(0.5) brightness(390%) saturate(4); 
+  filter: hue-rotate(40deg) saturate(0.5) brightness(390%) saturate(4); 
+  }
 .social {
   border: 0.5px solid white;
   border-radius: 50%;
@@ -159,13 +178,13 @@ h6 {
 }
 .top5a,
 .top5b,
-.top5c{
+.top5c {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.top5d{
+.top5d {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -174,11 +193,14 @@ h6 {
   justify-content: center;
 }
 
-.psocial{
+.psocial {
   display: flex;
 }
 
 @media screen and (min-width: 376px) {
+  body {
+    width: 100%;
+  }
   header {
     display: flex;
     flex-direction: column;
@@ -208,7 +230,7 @@ h6 {
   }
   .top5a,
   .top5b,
-  .top5c{
+  .top5c {
     width: 25%;
     padding: 1em;
     justify-content: center;
@@ -216,16 +238,15 @@ h6 {
     margin-right: 20px;
   }
 
-  .top5d{
+  .top5d {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     place-items: center;
   }
 
-  .psocial{
+  .psocial {
     display: flex;
     margin-top: 120px;
   }
-  
 }
